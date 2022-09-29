@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    {% extends "base.html" %} {% block content %}
+
+    <div class="row mt-4">
+      <div class="col-4"></div>
+      <div class="col-4"><h1>SignUp</h1></div>
+    </div>
+
+    <div class="mt-4 mb-4">
+      <div class="row">
+        <div class="col-4"></div>
+        <div class="col-4 card">
+          <div class="m-2">
+            <div class="row">
+              <label for="inputname" class="sr-only">Name</label>
+            </div>
+
+            <div class="row">
+              <input
+                type="name"
+                name="inputName"
+                id="inputName"
+                placeholder="Name"
+              />
+            </div>
+          </div>
+          <div class="m-2">
+            <div class="row">
+              <label for="inputemail" class="sr-only">Email address</label>
+            </div>
+
+            <div class="row">
+              <input
+                type="email"
+                name="inputemail"
+                id="inputemail"
+                placeholder="Email address"
+              />
+            </div>
+          </div>
+          <div class="m-2">
+            <div class="row">
+              <label for="inputpassword" class="sr-only">Password</label>
+            </div>
+
+            <div class="row">
+              <input
+                type="password"
+                name="inputpassword"
+                id="inputpassword"
+                placeholder="Password"
+              />
+            </div>
+          </div>
+          <center>
+            <button
+              id="btnSignup"
+              class="btn btn-lg btn-success btn-block m-2"
+              type="submit"
+            >
+              Sign up
+            </button>
+          </center>
+        </div>
+        <div class="col-3"></div>
+      </div>
+    </div>
+    {% endblock %}
+  </body>
+</html>

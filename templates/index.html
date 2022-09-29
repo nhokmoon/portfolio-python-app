@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    {% extends "base.html" %} {% block content %}
+
+    <section class="ttm-row">
+      <div class="row">
+        <div class="col-4">
+          <center>
+            <h1 style="margin-top: 15%">Portfolio making web</h1>
+            <a
+              href="/design"
+              class="btn btn-success p-3 mt-4"
+              tabindex="-1"
+              role="button"
+              aria-disabled="true"
+              >Start making</a
+            >
+          </center>
+        </div>
+        <div class="col-4">
+          <center>
+            <h1 style="margin-top: 15%">signup</h1>
+            <a
+              href="/signup"
+              class="btn btn-success p-3 mt-4"
+              tabindex="-1"
+              role="button"
+              aria-disabled="true"
+              >signup</a
+            >
+          </center>
+        </div>
+        <div class="col-4">
+          <center>
+            <h1 style="margin-top: 15%">tài liệu học tập</h1>
+            <a
+              href="/"
+              class="btn btn-dark p-3 mt-4"
+              tabindex="-1"
+              role="button"
+              aria-disabled="true"
+              >go go go</a
+            >
+          </center>
+        </div>
+      </div>
+    </section>
+    {% endblock %}
+  </body>
+</html>
