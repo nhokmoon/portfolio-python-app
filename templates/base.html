@@ -37,13 +37,9 @@
   </head>
   <body>
     <div class="page">
-      <div id="preloader" class="blobs-wrapper">
-        <div class="ttm-bgcolor-skincolor loader-blob"></div>
-      </div>
-
       <div class="row ms-2">
-        <div class="col-3">
-          <img src="/static/images/logo/logo.jpg" alt="..." />
+        <div class="col-12">
+          <!-- <img src="/static/images/logo/logo.jpg" alt="..." /> -->
           <!-- <button type="button" class="btn btn-danger mt-2">choose this</button> -->
         </div>
         <div class="col-3">
@@ -98,6 +94,9 @@
       {% block content %}{% endblock %}
 
       <!-- Optional JavaScript; choose one of the two! -->
+      <section
+        class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom"
+      ></section>
 
       <footer
         class="footer widget-footer ttm-bgcolor-darkgrey ttm-textcolor-white clearfix"
@@ -311,6 +310,7 @@
           </div>
         </div>
       </footer>
+
       <a id="totop" href="#top">
         <i class="fa fa-angle-up"></i>
       </a>

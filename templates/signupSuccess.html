@@ -11,7 +11,7 @@
 
     <div class="row mt-4">
       <div class="col-4"></div>
-      <div class="col-4"><h1>SignUp</h1></div>
+      <div class="col-4"><h1>SignUp Success</h1></div>
     </div>
 
     <div class="row">
@@ -19,40 +19,35 @@
       <div class="col-8">
         <div class="card m-4">
           <form class="m-2" method="post">
-            {{form.hidden_tag()}}
             <div class="form-row">
               <div class="form-group col-md-6">
-                <label for="inputname">Name</label>
-                {{form.inputname(placeholder="Enter your name")}}
-              </div>
-              <div class="form-group col-md-6">
-                <label for="inputpassword">Password</label>
-                {{form.inputpassword(placeholder="Enter your password")}}
+                <label for="inputname">Name:{{' '}}</label>
+                {{user.name}}
               </div>
             </div>
             <div class="form-group">
-              <label for="inputemail">Email Address</label>
-              {{form.inputemail(placeholder="Enter your email address")}}
+              <label for="inputemail">Email Address:{{' '}}</label>
+              {{user.email}}
             </div>
             <div class="form-group">
-              <label for="inputaddress">Address</label>
-              {{form.inputaddress(placeholder="Enter your address")}}
+              <label for="inputaddress">Address:{{' '}}</label>
+              {{user.address}}
             </div>
             <div class="form-row">
               <div class="form-group col-md-6">
-                <label for="inputcity">City</label>
-                {{form.inputcity(placeholder="Enter your city")}}
+                <label for="inputcity">City:{{' '}}</label>
+                {{user.city}}
               </div>
               <div class="form-group col-md-4">
-                <label for="inputstate">State</label>
-                <select id="inputstate" class="form-control">
+                <label for="inputstate">State:{{' '}}</label>
+                <!-- <select id="inputstate" class="form-control">
                   <option selected>Choose...</option>
                   <option>...</option>
-                </select>
+                </select> -->
               </div>
               <div class="form-group col-md-2">
-                <label for="inputzip">Zip</label>
-                {{form.inputzip(placeholder="Enter your zip")}}
+                <label for="inputzip">Zip:{{' '}}</label>
+                {{user.zip}}
               </div>
             </div>
             <div class="form-group">
@@ -67,12 +62,10 @@
                 </label>
               </div>
             </div>
-            {{form.submit(class="btn btn-primary")}}
           </form>
         </div>
       </div>
     </div>
-
     {% endblock %}
   </body>
 </html>

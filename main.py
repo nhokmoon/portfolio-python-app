@@ -1,3 +1,4 @@
+from cmath import log
 from flask import Flask, render_template
 from dotenv import load_dotenv
 from form import SignupForm
@@ -20,9 +21,24 @@ def design():
     return render_template("design.html")
 
 
-@app.route("/signup")
+@app.route("/signup", methods=['GET', 'POST'])
 def signup():
-    return render_template("signup.html")
+    form = SignupForm()
+
+    if form.validate_on_submit():
+        _name = form.inputname.data
+        _email = form.inputemail.data
+        _password = form.inputpassword.data
+        _address = form.inputaddress.data
+        _city = form.inputcity.data
+        _state = form.inputstate.data
+        _zips = form.inputzip.data
+
+        user = {'name': _name, 'email': _email, 'password': _password,
+                'address': _address, 'city': _city, 'zip': _zips, }
+        return render_template("signupSuccess.html", user=user)
+
+    return render_template("signup.html", form=form)
 
 
 if __name__ == '__main__':
